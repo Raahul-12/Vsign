@@ -1,0 +1,57 @@
+<div class="popupform" fxLayout="column" fxFlex="100">
+    <mat-toolbar style="background-color: black;">
+        <span style="color: white;margin: auto;">Sign Document</span>
+    </mat-toolbar>
+    
+    
+    <div style="margin-left: 3%;margin-right: 3%;width: 100%">
+        <mat-radio-group aria-label="Select an option" fxLayout="row" fxLayoutAlign="space-between center" style="margin-top: 3%;margin-left: 3%;margin-right: 3%;">
+            <mat-radio-button value="1" class="txt_onpage">On Page</mat-radio-button>
+            <mat-radio-button value="2" class="txt_ontag">On Tag</mat-radio-button>
+            <mat-radio-button value="2" class="txt_oncursor">On Cursor</mat-radio-button>
+        </mat-radio-group>
+    
+        <div style="margin-top: 5%;margin-left: 9%;margin-bottom: 3%;margin-right: 6%;" fxLayout="row" fxLayoutAlign="space-between center" class="mainselect1">
+            <mat-select [(value)]="selected1" class="dropdown_second">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Token</mat-option>
+                <mat-option value="option2">Page(custom)</mat-option>
+            </mat-select>
+        </div>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="selectedoption">
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <mat-radio-button value="first" class="txt_first">First Page</mat-radio-button>
+                <mat-radio-button value="last" class="txt_last">Last Page</mat-radio-button>
+                <mat-radio-button value="all" class="txt_allpages">All pages</mat-radio-button>
+            </div>
+            <div fxLayout="row" style="margin-left: 7%;margin-top: 3%;">
+                <mat-radio-button value="custom" style="font-weight: 500;">custom</mat-radio-button>
+                <div fxLayout="column" fxFlex="35">
+                    <div fxLayout="row" fxLayoutAlign="start center" class="searchbar1">
+                        <input class="inputfield"  [(ngModel)]="inputfromcustom">
+                    </div>
+                </div>
+            </div>
+    
+        </mat-radio-group>
+        <div style="margin-left: 3%;border-top: solid 2px #c3c3c3;margin-right: 2%;margin-top: 3%;"></div>
+        <mat-radio-group aria-label="Select an option" style="margin: 3%;">
+            <div fxLayout="column" fxLayoutAlign="center start" style="margin-left: 2%;">
+                <mat-radio-button value="1" class="txt_sign">Sign On Screen</mat-radio-button>
+                <mat-radio-button value="2" class="txt_useaadhar">Use Aadhar</mat-radio-button>
+                <mat-radio-button value="3" class="txt_useusb">Use USB Token</mat-radio-button>
+                <mat-radio-button value="4" class="txt_service">Service Certificate</mat-radio-button>
+            </div>
+        </mat-radio-group>
+        <div style="margin-left: 2%;border-top: solid 2px #c3c3c3;margin-right: 2%;"></div>
+        <div>
+            <mat-radio-button value="1" class="txt_signalldoc">Sign On all 2 Documents</mat-radio-button>
+        </div>
+        <div style="margin-top: 4%;"></div>
+        <div class="box2" style="cursor: pointer;margin: auto;" (click)="signdocument()" fxLayout="row" fxLayoutAlign="start center">
+            <img src="../../assets/image/vsign/pen-alt.svg" class="doc1">
+            <p class="doc">Sign Document</p>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,90 @@
+<div id="user-master" class="page-layout carded fullwidth">
+    <div class="center">
+        <div class="outer" fxLayout>
+            <div class="bg"></div>
+            <div>
+                <h3 style="margin: 0px;padding-left: 10px;"><b>Settings</b></h3>
+            </div>
+
+        </div>
+        <div fxLayout class="content-card1">
+            <div fxFlex="23" class="side-bar" style="background-color: #f5f5f5">
+
+                <mat-toolbar>
+                    <mat-toolbar-row fxLayout="row" class="px-8" fxLayoutAlign="space-between center">
+                        <div class="search-wrapper" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                            <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                                <input type="text" [(ngModel)]="searchText" placeholder="Search" fxFlex>
+                                <mat-icon class="s-16">search</mat-icon>
+                            </div>
+                        </div>
+                    </mat-toolbar-row>
+                </mat-toolbar>
+
+                <div class="sidenav-content" fusePerfectScrollbar fxFlex>
+
+
+                    <div class="sidenav-content" fusePerfectScrollbar fxFlex>
+                        <div *ngFor="let settings  of AllSettings  | filter: searchText ; index as i">
+                            <div>
+                                <div class="mx-8 mb-8 mt-0 p-8 leftCard" (click)="loadSelectedUser(i)" [style.border-left-color]="selectID ==settings.AppID?'#efb577':'#cccccc'">
+                                    <!-- <div fxLayout class="pb-4" fxLayoutAlign="space-between center"> -->
+                                    <div fxFlex><strong>{{settings.Name}}</strong></div>
+                                    <!-- <div fxFlex align="end">{{settings .CreatedOn | date :'dd/MM/yyyy'}}</div> -->
+                                    <!-- </div> -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="(AllSettings  | filter: searchText)?.length === 0" class="no-results-message">
+                            <span class="pl-12"> No results..</span>
+                        </div>
+                    </div>
+                    <!-- <div *ngFor="let settings  of allsettings  | filter: searchText"></div> -->
+                    <!-- <div>
+                        <div class="mx-8 mb-8 mt-0 p-8 leftCard" style="margin-top: 20px !important;">
+                            <div fxLayout class="pb-4" fxLayoutAlign="space-between center">
+                                <div fxFlex><strong>Classification</strong></div>
+                            </div>
+
+                        </div>
+                    </div> -->
+                    <!-- <div>
+                        <div class="mx-8 mb-8 mt-0 p-8 leftCard">
+                            <div fxLayout class="pb-4" fxLayoutAlign="space-between center">
+                                <div fxFlex><strong>Templates</strong></div>
+                            </div>
+
+                        </div>
+                    </div> -->
+                    <!-- <div>
+                        <div class="mx-8 mb-8 mt-0 p-8 leftCard">
+                            <div fxLayout class="pb-4" fxLayoutAlign="space-between center">
+                                <div fxFlex><strong>Connectors</strong></div>
+                            </div>
+
+                        </div>
+                        <div class="mx-8 mb-8 mt-0 p-8 leftCard">
+                            <div fxLayout class="pb-4" fxLayoutAlign="space-between center">
+                                <div fxFlex><strong>Notification</strong></div>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                </div>
+                <div class="borderRight1"></div>
+            </div>
+            <mat-card fxFlex="77" class="side-bar p-0">
+                <div class="sidenav-content" fxFlex fxLayout="column">
+
+                </div>
+
+            </mat-card>
+        </div>
+        <!-- <mat-progress-spinner *ngIf="isProgressBarVisibile" class="progressBarPostion" color="accent" mode="indeterminate">
+        </mat-progress-spinner>
+        <div id="overlay" *ngIf="isProgressBarVisibile">
+        </div> -->
+    </div>
+</div>

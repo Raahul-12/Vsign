@@ -1,0 +1,270 @@
+<div class="formmargin" id="container" style="background-color: white;width: 100%;">
+    <div class="header">
+        <p class="border">Document Center </p>
+
+    </div>
+    <!-- <form [formGroup]="form"> -->
+    <div fxLayout="row">
+        <div fxLayout="column" fxFlex="26%" style="display: block;">
+            <div class="text_sign">Title</div>
+            <div class="title_searchbar">
+                <input class="input" style="font-weight: bold;">
+            </div>
+        </div>
+        <div fxFlex="7%"></div>
+        <div fxLayout="column" fxFlex="25%" style="display: block;">
+            <div class="text_sign">Tag</div>
+            <div class="title_searchbar1">
+                <input class="input" style="font-weight: bold;">
+            </div>
+        </div>
+        <div fxFlex="5%"></div>
+        <div fxFlex fxLayout="row" fxFlex fxLayoutAlign="end center" class="all_top">
+            <!-- <div fxFlex="9"></div> -->
+            <div fxLayout="column" fxFlex="25%" fxLayoutAlign="start center">
+                <p class="text_all"> All Users </p>
+                <div class="border_all">
+                </div>
+            </div>
+            <div fxFlex="4%"></div>
+            <button mat-stroked-button style="width: 130px;height: 40px;border-color: #64a8e3;background-color: #edf7ff;margin-right: 10px;" fxLayout="row">
+                <img src="../../assets/image/vsign/document (1).png " class="folder">
+                <p class="txt_cpy" >Copy from</p>
+                <p class="txt_temp" >Template</p>
+            </button>
+
+
+            <button mat-stroked-button style="width: 130px;height:40px;border-color: #faaa55;background-color: #fffdf4;" (click)="onCreate()" fxLayout="row">
+                <div class="fabbox" style="margin-top: 11px;">
+                    <img src="../../assets/image/vsign/add.png" style="width:8px;">
+                </div>
+                 <p style="margin-top: -27px;margin-left: 30px;" >Add User</p>
+            </button>
+
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center" style="margin-right: 10%;">
+        <div *ngIf="!flagaddhide">
+            <div *ngIf="flagadduser">
+                <form [formGroup]="form">
+
+                    <mat-radio-group formControlName="select" fxLayout="row" class="smallRadio">
+                        <div style="white-space: nowrap;font-weight: bold;font-size: 17px;">Select an option :</div>
+                        <mat-radio-button value="user" style="margin-left: 10%;" (click)="change('user')">User</mat-radio-button>
+                        <mat-radio-button value="user/Email" style="margin-left: 10%;" (click)="change('user/Email')">Email</mat-radio-button>
+                        <div fxFlex="40%"></div>
+                    </mat-radio-group>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayout.lt-md="row wrap" style="margin-top: 1rem;">
+
+
+        <div fxLayout="column" fxFlex="10">
+            <div class="text_sign">Sign Type</div>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="mainselect">
+
+                <mat-select [formControl]="toppings" multiple>
+                    <mat-select-trigger>
+                        {{toppings.value ? toppings.value[0] : ''}}
+                        <span *ngIf="toppings.value?.length > 1" class="example-additional-selection">
+                        (+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                      </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                </mat-select>
+            </div>
+
+        </div>
+        <div fxLayout="column" fxFlex="15" style="position: relative;">
+            <div class="text_Due">Due Date</div>
+            <div fxLayout="row" fxLayoutAlign="start center" class="searchbar">
+                <input matInput [matDatepicker]="picker" [(ngModel)]="dueDate" class="inp_datepkr">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </div>
+        </div>
+        <div fxFlex="8"></div>
+        <div fxLayout="column" fxFlex="10">
+            <div class="text_Ref">Reference</div>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="mainselect1">
+                <mat-select [(value)]="selected1" class="dropdown_second">
+                    <mat-option>None</mat-option>
+                    <mat-option value="INV">INV</mat-option>
+                    <mat-option value="PO">PO</mat-option>
+                </mat-select>
+            </div>
+        </div>
+
+        <div fxLayout="column" fxFlex="15">
+            <div class="text_Refno">Reference No</div>
+            <div fxLayout="row" fxLayoutAlign="start center" class="searchbar1">
+                <input class="inputfield" [(ngModel)]="refno" style="font-weight: bold;">
+            </div>
+        </div>
+        <!-- <div fxFlex="12.7"></div> -->
+
+
+        <!-- <div *ngIf="!flagaddhide" style="float: right;">
+            <div *ngIf="flagadduser" autocomplete="off" fxLayout="row">
+                <form [formGroup]="form">
+                    <div style="white-space: nowrap;margin-top: 5px;font-weight: bold;font-size: 17px;">Select an option :</div>
+                    <mat-radio-group formControlName="select" fxLayout="row" fxLayoutGap="20%" style="margin-top: 1%;margin-bottom: 1%;">
+
+                        <mat-radio-button value="user" (click)="change('user')">User</mat-radio-button>
+                        <mat-radio-button value="user/Email" (click)="change('user/Email')">Email</mat-radio-button>
+
+                    </mat-radio-group>
+                    <div fxFlex="20"></div>
+                </form>
+            </div>
+        </div> -->
+
+
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center" [formGroup]="form">
+
+        <div *ngIf="flagadduser" style="width: 400px;margin-top: -4%;">
+            <div *ngIf="!flagaddhide">
+                <div fxLayout="column" fxFlex="40">
+                    <div class="text_user">User</div>
+
+                    <div fxLayout="row" fxLayoutAlign="start center" class="searchbar2">
+                        <mat-select [(value)]="selected2" class="inputfield" formControlName="user">
+                            <mat-option>None</mat-option>
+                            <mat-option value="INV">INV</mat-option>
+                            <mat-option value="PO">PO</mat-option>
+                        </mat-select>
+                    </div>
+
+                </div>
+
+                <div fxFlex="5"></div>
+
+                <!-- <div fxLayout="column" fxFlex="40">
+                    <div class="text_email">Email</div>
+                    <div fxLayout="row" fxLayoutAlign="start center" class="searchbar3">
+
+
+                        <mat-form-field style="width: 156px;height: 56px;">
+                            <input matInput class="inputfield" name="user" style="font-weight: bold;" formControlName="email">
+
+                            <mat-error *ngIf="form.get('email').hasError('required')">
+                                Email is required
+                            </mat-error>
+                            <mat-error *ngIf="form.get('email').hasError('email')">
+                                Please enter a valid email address
+                            </mat-error>
+
+                        </mat-form-field>
+                    </div>
+
+                </div> -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="text_email">Email :</label>
+                        <input type="text" class="form-control searchbar3" style="font-weight: bold;" formControlName="email">
+
+                        <span class="text-danger" style="color: red;" *ngIf="form.controls['email'].hasError('required') && (form.controls['email'].dirty || form.controls['email'].touched)">This field is required</span>
+                        <span class="text-danger" style="color: red;" *ngIf="form.controls['email'].hasError('pattern') && (form.controls['email'].dirty || form.controls['email'].touched)">enter valid email</span>
+                    </div>
+
+
+                </div>
+
+
+                <div fxFlex="5"></div>
+
+                <div style="cursor: pointer;width: 54px;;height: 20px;margin-top: 23px;">
+                    <img src="../../../assets/image/check-mark.png" (click)="ontick()">
+                    <!-- <input type="button" value="✓" style="height: 20px;width: 20px;cursor: pointer;" /> -->
+                </div>
+                <div fxFlex="0.5"></div>
+            </div>
+
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="row wrap" style="width: 100%;">
+
+        <div fxFlex.gt-sm="58" fxFlex.gt-xs="100" fxFlex.lt-sm="100" fxFlex="70">
+            <div class="text_rem">Remarks</div>
+            <div fxLayout="row" fxLayoutAlign="start center" class="remarks">
+                <textarea class="inputfield1"></textarea>
+
+            </div>
+        </div>
+
+        <div fxLayout="column" fxFlex style="overflow: auto;">
+            <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of arr1; index as i" cdkDrag>
+
+                    <section fxLayout="row" fxLayoutGap="10px">
+
+                        <img src="../../assets/image/vsign/user-2.png" class="img_all">
+                        <div fxLayout="column" fxLayoutAlign="center center">
+                            <div class="txt_prdtname">{{item.user}}</div>
+
+                            <div style="margin-left: 10px;">{{item.email}}</div>
+                        </div>
+
+                    </section>
+                    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="25px">
+
+                        <img src="../../assets/image/vsign/sign-delete-icon.png" style="width: 25px;height: 25px;cursor: pointer;" (click)="removeItem(i)">
+                        <div style=" cursor: move;" cdkDragHandle>
+                            <div class="smline1"></div>
+                            <div class="smline2"></div>
+                            <div class="smline3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div fxLayout="column" fxLayoutAlign="center center" style="border: none;" class="drop">
+        <div class="drop-container" ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
+            <h1 class="dropfiles" *ngIf="!flag">Drop files here to add</h1>
+            <div *ngIf="flag" fxLayout="row" fxLayoutAlign="start" fxLayoutGap="11px">
+                <div *ngFor="let item of files1;index as i" class="box_add">
+                    <img src="../../assets/image/vsign/sign-delete-icon.png" class="removeicon" (click)="remove(item)">
+                    <p class="txtboxname">{{item.name}}</p>
+                    <p style="text-align: center;margin-top: -10px;">{{item.size | filesize}} </p>
+                </div>
+            </div>
+        </div>
+
+        <p class="txt_or">OR</p>
+
+
+        <div for="test" style="margin-bottom: 2%;">
+            <!-- <p>Browse file</p> -->
+            <input type="file" id="test" #fileInput ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple style="display: none" />
+            <button (click)="fileInput.click()" class="upldbtn"><img style="width: 20px;height: 20px;" src="../../assets/image/folder (1).svg"><p class="browse">Browse file</p></button>
+        </div>
+
+    </div>
+    <div *ngIf="hidespin" style="position: absolute;right: 40px;bottom: 75px;">
+        <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
+        </mat-progress-spinner>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px" style="margin-top: 1%;">
+        <button mat-raised-button style="border:none;box-shadow:none;background-color: #efb577;color: white;width: 13rem;" (click)="startUpload()">Save</button>
+        <button mat-raised-button style="border:none;box-shadow:none;background-color: #efb577;color: white;width: 13rem;">Release</button>
+
+    </div>
+
+
+    <!-- </form> -->
+</div>

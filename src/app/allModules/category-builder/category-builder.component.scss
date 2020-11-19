@@ -1,0 +1,213 @@
+.header{
+    background-image: url('../../../assets/image/header.png') !important;
+    background-color: white !important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height:50px ;
+   width:100%;
+   border-bottom: 1px solid rgba(255, 85, 0, 0.1) ;
+    /* border-bottom: solid 3px #ffe6e6; */
+}
+.category_header{
+    font-weight: bold;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 6px;
+    margin-left: 3px;
+}
+.icon_toolbar{
+    margin-top:10px;
+    margin-left: 15px;
+    background-color: white !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2f2f2f;
+    font-size: 17px;
+    border-bottom: 1px solid #dadada;
+    width:96%;
+}
+.home_icon{
+   color: #e48e66;
+   margin-right: 15px;
+   margin-left: -10px;
+}
+.arrow_text{
+    margin-left: 15px;
+   margin-right: 15px;
+//   margin-bottom: 0px;
+}
+.add_button{
+    background-color: #f6b570 !important;
+    width: 18px;
+    margin-top: 5px;
+    height: 18px;
+    margin-left: 10px;
+    box-shadow: none;
+}
+.add_icon{
+    color: white;
+    margin-top: -26px;
+    margin-left: -3px;
+    font-size: 11px !important;
+}
+.add_button_div{
+    color:#faaa55;
+    border-radius: 2px;
+    border: solid 1px #faaa55;
+    background-color: #fffdf4;
+    width:80px;
+    height:30px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.add_text{
+    margin-top: -40px;
+    text-align: end;
+    margin-right: 10px;
+}
+.cate_sub_text{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2f2f2f;
+    font-size: 16px;
+    margin-top: -12px;
+    font-weight: 700;
+}
+.sub_div_header{
+    border-radius: 4px;
+  background-color: #f5f5f5;
+}
+.search-input{
+    width: 80%;
+    height: 30px;
+    padding-left: 70px;
+    margin-left: 15px;
+    margin-top: 17px;
+    border-radius: 3.3px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #c3c3c3;
+    font-size: 13px;
+    font-weight: 500;
+}
+.searchImg{
+    object-fit: contain;
+    opacity: 0.4;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 24px;
+    width: 20px !important;
+    height:20px !important;
+}
+.divider{
+    width: 120px;
+    height: 1px;
+    opacity: 0.2;
+    margin-top: 15px !important;
+    border-bottom: solid 1px #000000;
+    margin: auto;
+}
+.list_text{
+    color: #4784f7;
+    line-height: 2.73;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+  //  margin-bottom: 0px;
+}
+.list_div{
+    height: 70px;
+    border-bottom: 1px solid #dadada;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+.vertical_divider{
+    width: 1px;
+    height: 15px;
+   // margin-bottom: 0px;
+    opacity: 0.2;
+    border-left: solid 1px #000000;
+}
+.folder_div{
+    border: solid 1px #efb577; 
+    margin: 15px;
+    height:630px;
+}
+.catgry_div{
+    margin-left: 15px;margin-top: 15px;
+    margin-right: 25px;
+}
+.right_vertcal_divider{
+    width: 2px;
+    height: 500px;
+    opacity: 0.9;
+    border: solid 1px #63316d;
+    background-color: #63316d;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+.dot_line{
+    width: 20px;
+    height: 3px;
+    // margin-top: 10px;
+    border-bottom: dotted 2px #63316d;
+}
+.circle_folder{
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    border: solid 2px #63316d;
+    background-color: #6fe3ff;
+    margin-right: 2px;
+
+}
+.folder_text{
+    font-size: 15px;
+  font-weight: 600;
+  color: #2f2f2f;
+  margin-left: 10px;
+  line-height: 0;
+
+}
+.folder_inner_div{
+    display: -webkit-box;
+    margin-top: 10px;
+
+}
+.folder_sub_div{
+    display: -webkit-box;
+    margin-top: 10px;
+    margin-left: 40px;
+
+}
+.folder_sub_div2{
+    display: -webkit-box;
+    margin-top: 10px;
+    margin-left: 80px;
+
+}
+.vertcle_dot_line2{
+   
+    width: 3px;
+    height: 20px;
+    margin-top: -9px !important;
+    margin-bottom: -8px !important;
+    margin-left: 80px;
+    border-left: dotted 2px #63316d;
+  
+}
+.vertcle_dot_line{
+   
+    width: 3px;
+    height: 20px;
+    margin-top: -9px !important;
+    margin-bottom: -8px !important;
+    margin-left: 40px;
+    border-left: dotted 2px #63316d;
+  
+}
+.folder_img{
+  //  margin-bottom: 2px;
+  margin-top: 5px;
+  margin-left: 5px;
+  height:14px;
+  width:15px !important;
+}

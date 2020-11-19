@@ -1,0 +1,27 @@
+<div class="popupform" fxLayout="column" fxFlex="100">
+    <h2>Add User</h2>
+    <div [formGroup]="form" style="width: 100%; height: 100%;" fxLayout="column">
+
+        <mat-radio-group aria-label="Select an option" formControlName="select" fxLayout="row" style="margin-top: 3%;margin-bottom: 3%; width: 100%;display: flex ;flex-direction: row;justify-content: space-between;">
+            <mat-radio-button value="user" (click)="change('user')">User</mat-radio-button>
+            <mat-radio-button value="user/Email" (click)="change('user/Email')">Temp User/Email</mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field appearance="fill">
+            <mat-label>Select User</mat-label>
+            <mat-select formControlName="j">
+                <mat-option *ngFor="let u of allusers;index as i" [value]="i">
+                    {{u.userName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="level">
+        </mat-form-field>
+
+    </div>
+    <div style="flex-direction: row; display: flex; width: 100%; justify-content: space-evenly;">
+        <button mat-raised-button style="background-color: #faaa55 ;" (click)="close()">Close</button>
+        <button mat-raised-button style="background-color: #faaa55 ;" (click)="save()">Save</button>
+    </div>
+</div>

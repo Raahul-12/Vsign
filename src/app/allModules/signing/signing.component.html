@@ -1,0 +1,245 @@
+<div style="padding-left: 2%;padding-right: 2%;background-color: white;width: 100%;height: 100%;">
+    <div class="header">
+        <p style="font-weight: bold;font-size: 18px;padding-top: 13px;" class="border">Digital Signing </p>
+
+    </div>
+    <div fxLayout="row" class="box" style="position: relative;width: 100%;">
+
+
+
+        <p class="line"></p>
+        <div fxLayout="column" fxLayoutAlign="center center" fxFlex="14">
+            <div fxLayout="row">
+                <p class="name"> RajKumar K.</p>
+                <img src="../../assets/image/vsign/comment.png" class="comment">
+
+            </div>
+
+            <p class="line1"></p>
+
+            <p class="date">20/07/2020</p>
+            <!-- </div> -->
+
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start start">
+            <p class="line2"></p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start start">
+            <p class="line3"></p>
+        </div>
+
+        <div class="container">
+            <p class="txt_initiated">Initiated</p>
+            <p class="txt_progress">In progress(1/2) &nbsp;
+                <img src="../../assets/image/vsign/info-circle.svg" class="img_info">
+            </p>
+
+            <p class="txt_completion">Completion</p>
+            <ul class="progressbar">
+                <li class="active"></li>
+                <li class="asn"></li>
+                <li style="color: #232044;opacity: 0.5;"></li>
+            </ul>
+            <div class="txt_20july">20 July ‘20</div>
+
+            <p class="txt_last">last assign</p> <strong class="txt_rajkumar">RajKumar</strong>
+            <img src="../../assets/image/vsign/comment.png" class="img_msg1">
+
+            <div class="txt_21july">21 July ‘20 </div>
+            <p class="txt_last1">last assign</p> <strong class="txt_rajaram">Rajaram</strong>
+            <img src="../../assets/image/vsign/comment.png" class="img_msg2">
+            <div class="txt_22july">22 July ‘20</div>
+            <p class="txt_last2">with
+                <strong class="txt_Karthi">Kartikeya</strong>
+
+
+
+
+                <!-- <div class="txt_21july">21 July ‘20</div>
+            <p class="txt_last">last assign</p> <strong class="txt_rajaram">Rajaram</strong>
+            <div class="text2">22 July ‘20</div>
+            <div class="text2">with Kartikeya</div> -->
+
+
+        </div>
+        <div fxFlex="20"></div>
+        <div fxLayout="row" fxLayoutAlign="start center" class="innerbox">
+            <img src="../../assets/image/vsign/alert.svg" class="comment1">
+            <div fxLayout="column">
+
+
+                <p class="line4"></p>
+
+                <p class="schedule">Signing Completion by 23 July '20</p>
+
+                <div class="schedule1">On schedule</div>
+
+            </div>
+
+        </div>
+        <div fxLayout="row">
+            <p class="txt_view">view details</p>
+            <img src="../../assets/image/vsign/arrow-of-double-angle-pointing-down.svg" class="arrow">
+        </div>
+        <!-- </div> -->
+
+        <!-- </div> -->
+    </div>
+    <p style="font-weight: bold;font-size: 18px;" class="border">Selected for Signature (4)</p>
+    <div style="border-bottom: 3px solid #efb577;width: 10%;margin-left: 45px;"></div>
+    <form [formGroup]="form">
+        <div fxLayout="row" fxLayoutGap="5" fxLayout="layout-wrap">
+            <div fxLayout="column" fxFlex="14" fxFlex.md="21" fxFlex.sm="25">
+                <!-- <mat-checkbox>
+                    <div fxLayout="column">
+                        <p class="signature1">Increament Letter - John</p>
+
+                        <mat-form-field appearance="none" fxLayout="row">
+
+                            <input matInput type="text" [(ngModel)]='mode1' style="width:10px" formControlName="FilePages" class="Pages">
+                            <span class="Pages">Pages &nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode2' style="width:40px" formControlName="FileSize" class="Pages">
+                            <span class="Pages">&nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode' style="width:30px" formControlName="FileType" class="Pages">
+                        </mat-form-field>
+
+
+
+                    </div>
+                </mat-checkbox> -->
+                <!-- <mat-checkbox>
+                    <div fxLayout="column">
+                        <p class="signature1">Increament Letter - Raahul</p>
+                        <mat-form-field appearance="none" class="form_field" fxLayout="row">
+
+                            <input matInput type="text" [(ngModel)]='mode4' style="width:10px" formControlName="FilePages1" class="Pages">
+                            <span class="Pages">Pages &nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode5' style="width:40px" formControlName="FileSize1" class="Pages">
+                            <span class="Pages">&nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode3' style="width:30px" formControlName="FileType1" class="Pages">
+                        </mat-form-field>
+                    </div>
+                </mat-checkbox> -->
+                <mat-checkbox>
+                    <div fxLayout="column">
+                        <p class="signature2">{{returnfile.fileName}}</p>
+
+                        <div fxLayout="row" class="txt_inp1">
+
+                            <input matInput type="text" [(ngModel)]='totalPages' style="width:10px" formControlName="FilePages" class="Pages">
+                            <span class="Pages">Pages &nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode2' style="width:40px" formControlName="FileSize" class="Pages">
+                            <span class="Pages">&nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode' style="width:30px" formControlName="FileType" class="Pages">
+                        </div>
+                        <!-- <p class="Pages1">8 Pages &nbsp;&nbsp;:&nbsp;&nbsp; 230 KB &nbsp;&nbsp;:&nbsp;&nbsp; PDF</p> -->
+
+                    </div>
+                </mat-checkbox>
+                <!-- <mat-checkbox>
+                    <div fxLayout="column">
+                        <p class="text_incrRahul">Increament Letter - Rahul</p>
+                        
+                        <div fxLayout="row" class="txt_inp2">
+
+                            <input matInput type="text" [(ngModel)]='mode4' style="width:10px" formControlName="FilePages1" class="Pages">
+                            <span class="Pages">Pages &nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode5' style="width:40px" formControlName="FileSize1" class="Pages">
+                            <span class="Pages">&nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode3' style="width:30px" formControlName="FileType1" class="Pages">
+                        </div>
+                    </div>
+                </mat-checkbox>
+                <mat-checkbox>
+                    <div fxLayout="column">
+                        <p class="text_incrRavi">Increament Letter - Ravikant</p>
+                        <div fxLayout="row" class="txt_inp3">
+
+                            <input matInput type="text" [(ngModel)]='mode4' style="width:10px" formControlName="FilePages1" class="Pages">
+                            <span class="Pages">Pages &nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode5' style="width:40px" formControlName="FileSize1" class="Pages">
+                            <span class="Pages">&nbsp;&nbsp;:&nbsp;&nbsp;</span>
+                            <input matInput type="text" [(ngModel)]='mode3' style="width:30px" formControlName="FileType1" class="Pages">
+                        </div>
+                       
+                    </div>
+                </mat-checkbox> -->
+                <!-- <mat-checkbox>
+                    <div fxLayout="column">
+                        <p class="signature2">Increament Letter - Prashanth</p>
+                        <p class="Pages1">8 Pages &nbsp;&nbsp;:&nbsp;&nbsp; 230 KB &nbsp;&nbsp; :&nbsp;&nbsp; PDF</p>
+                    </div>
+                </mat-checkbox> -->
+
+            </div>
+            <div fxFlex="1"></div>
+            <p class="line5"></p>
+            <div fxFlex="1"></div>
+
+            <div fxLayout="column" style="width: 100%;">
+                <div style="border: 5px solid #f5f5f5;margin-top: -44px;height: 100%;" id="print-section">
+                    <!-- <img src="{{imageSrc}}" style="width: 100%;height: 58rem;" *ngIf="flag1"> -->
+                    <div style="height: 630px;">
+                        <ng2-pdfjs-viewer #pdfViewerAutoLoad 
+                        [externalWindow]="false"
+    [downloadFileName]="returnfile.fileName"
+    [openFile]="false"
+    [viewBookmark]="false"
+    [download]="true"
+    viewerId="MyUniqueID"
+    (onDocumentLoad)="afterLoadComplete($event)"
+                        ></ng2-pdfjs-viewer>
+                    </div>
+                    <!-- <ngx-imageviewer src="{{imageSrc}}" style="width: 100%;height: 60.5rem;">
+
+                    </ngx-imageviewer> -->
+                    <img [src]="signatureImage" *ngIf="signatureImage" style="height: 100px;" />
+                </div>
+                <div fxLayout="row" class="footer" *ngIf="flag1">
+                    <div class="round_print">
+
+                        <img src="../../assets/image/vsign/print.png" class="imgprint">
+                    </div>
+                    <button class="btn_print" printSectionId="print-section" ngxPrint>print</button>
+                    <!-- <button >Print</button> -->
+
+                    <div class="txt-letter">Increament Letter-John-Preview(1/2)</div>
+                    <p class="txt_120">120%</p>
+                    <div style="margin-top: 13px;">-</div>
+                    <hr class="horizontal_line">
+                    <hr class="vertical_line">
+                    <div class="plus">+</div>
+
+                    <img src="../../assets/image/vsign/expand.svg" style="margin-right: 7px;">
+                </div>
+            </div>
+            <div fxFlex="1"></div>
+
+            <div fxlayout="column" fxFlex>
+                <div class="box2" style="cursor: pointer;" fxLayout="row" *ngIf="hideSignbutton" (click)="Onpen()" (click)="onCreate()" fxLayoutAlign="start center">
+                    <img src="../../assets/image/vsign/pen-alt.svg" class="doc1">
+                    <p class="doc">Sign Document</p>
+                </div>
+                <div style="border: 1px solid #c4c4c4;
+                height: 568px;
+                position: relative;
+                width: 165px;
+                bottom: 30px;">
+                    <button *ngFor="let imageButton of imageButtons; let  i= index" (click)="onClick(imageButton)" class="button" style="margin-left: 16px;margin-top: 12px;">
+                        <img [src]='imageButton.src' style="width: 130px;height: 170px;">
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <ng-signature-pad *ngIf="flag" doneButtonText="Add/Remove in image" class="pad" format="base64" [width]=1300 [height]=80 (done)="showImage($event)">
+        </ng-signature-pad>
+        <!-- <ngx-imageviewer [src]="'../../assets/image/vsign/letter1.png'" style="width: 100%;height: 60.5rem;"></ngx-imageviewer> -->
+        <!-- <div *ngFor="let image of images1; let i as index"> -->
+        <!-- <app-image-viewer [images]="images1.src" [idContainer]="'idOnHTML'" [loadOnInit]="true"></app-image-viewer> -->
+        <!-- </div> -->
+
+    </form>
+
+
+</div>

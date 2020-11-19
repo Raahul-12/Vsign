@@ -1,0 +1,94 @@
+<div style="background-color: white;width: 100%;">
+<mat-toolbar class="header">
+    <p class="Doc_header">Document Search</p>
+</mat-toolbar>
+
+<div fxFlexLayout="row" class="search_div">
+    <div class="search_title_div">
+        <img src="../../../assets/image/search1.png" style="margin-top: 13px;height:20px" width="20px" >
+       <p style="margin-left: 10px;margin-top: 10px;" >Search</p>
+    </div>
+
+<div class="search_input_div">
+     <select class="select_search">
+         <option>All
+     </option>
+    </select>
+    <input class="search_input" placeholder="Search for keywords here">
+    <button class="search_img_div">
+        <img src="../../../assets/image/search2.png" height="20px" width="20px" >
+    </button>
+</div>
+</div>
+
+
+<div fxFlexLayout="row">
+  <div fxFlex="40" class="div_first" style="border-right: 1px solid  #707070;">
+      <div style="padding-right:50px;" >
+       <p class="first_div_title">How to Search</p>
+       <p style="font-weight: 500;">If you are not familiar with the search features, or want to learn
+        more, see one of the following resources.</p>
+    </div>
+   <br>
+   <br>
+  <div>
+      <button class="doc_btn"  >Documentation</button>
+      <!-- <span class="material-icons">
+        launch
+        </span> -->
+      <mat-icon aria-hidden="false"  class="launch_icon">launch</mat-icon>
+      <button class="tutorial_btn">Tutorial</button> 
+      <mat-icon aria-hidden="false"  class="launch_icon">launch</mat-icon>
+
+  </div>
+  <br>
+   <br>
+   <p class="first_div_title">Search History</p>
+   <div style="display: inline;">
+   <mat-icon  class="expand_icon">chevron_right</mat-icon>
+      <p class="expand_icon_text">Expand your search history</p>
+   </div>
+  </div>
+
+  <div fxFlex="60" class="div_first" >
+    <p class="first_div_title">what to Search</p>
+
+    <div fxFlexLayout="row">
+       <div  fxFlex="33">
+           <p class="sub_title">100,123,456,789 Entries</p>
+           <p class="caption">INDEXED</p>
+
+       </div>
+       <div  fxFlex="33">
+        <p class="sub_title">1 year ago</p>
+        <p class="caption">EARLIEST ENTRY</p>
+           
+    </div>
+    <div  fxFlex="33">
+        <p class="sub_title">10 hours ago</p>
+        <p class="caption">LATEST ENTRY</p>
+           
+    </div>
+    </div>
+    <br>
+   <!-- <br> -->
+    <button class="data_btn"  >Data Summary</button>
+
+</div>
+
+</div>
+</div>
+
+
+<footer class="footer">
+    <div fxFlexLayout="row">
+   <div fxFlex="80"  fxFlexLayout="row">
+    <div fxFlex="7">  <p >About</p></div>
+        <div fxFlex="7">   <p>Support</p> </div>
+            <div fxFlex="7"> <p>File a Bug</p>  </div>
+                <div fxFlex="10"><p>Documentation</p> </div>
+                    <div fxFlex="7"> <p>Privacy</p></div>  
+                </div> 
+<div fxFlex="29"><p>© 2020 BP Cloud. All rights reserved.</p></div>   
+</div>
+</footer>
