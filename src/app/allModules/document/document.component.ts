@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DocumentService } from '../document/document.service';
 import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions } from 'ngx-uploader';
-import { MatDialog, MatDialogConfig, MatSnackBar } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 
 import { SnackBarStatus } from "app/notifications/notification-snack-bar/notification-snackbar-status-enum";
 // function readBase64(file) {
@@ -20,8 +20,7 @@ import { SnackBarStatus } from "app/notifications/notification-snack-bar/notific
 //     reader.readAsDataURL(file);
 //   });
 // }
-import { from, of } from 'rxjs';
-import { PopupcreateComponent } from './popupcreate/popupcreate.component';
+
 import { createdoc } from './models/createdoc.model';
 import { docatt } from './models/docatt.model';
 import { docapp } from './models/docapp.model';
@@ -456,17 +455,7 @@ export class DocumentComponent implements OnInit {
     return tempdoc;
   }
 
-  // cancelUpload(id: string): void {
-  //   this.uploadInput.emit({ type: 'cancel', id: id });
-  // }
-
-  // removeFile(id: string): void {
-  //   this.uploadInput.emit({ type: 'remove', id: id });
-  // }
-
-  // removeAllFiles(): void {
-  //   this.uploadInput.emit({ type: 'removeAll' });
-  // }
+  
 }
 class DocFormData {
 
